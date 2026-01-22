@@ -1,4 +1,3 @@
--- 1. Setup Environment & Drop Tables in Correct Order
 DROP TABLE IF EXISTS Employee_Shift;
 DROP TABLE IF EXISTS Employee_Training;
 DROP TABLE IF EXISTS Training_skill;
@@ -15,7 +14,7 @@ DROP TABLE IF EXISTS Training;
 DROP TABLE IF EXISTS Department;
 GO
 
--- 2. Create Tables (Based on PDF structure)
+
 CREATE TABLE Department (
     Depart_id INT PRIMARY KEY,
     Name NVARCHAR(100) NOT NULL UNIQUE,
@@ -134,7 +133,7 @@ CREATE TABLE Employee_Shift (
 );
 GO
 
--- 3. Insert Data (Translated and corrected)
+
 INSERT INTO Department VALUES (1, 'Administration', 'Morning');
 INSERT INTO Department VALUES (2, 'Finance', 'Morning');
 INSERT INTO Department VALUES (3, 'Development', 'Flexible');
@@ -164,11 +163,11 @@ INSERT INTO Employee_Training VALUES (10, 101), (20, 102), (30, 101);
 INSERT INTO Employee_Shift VALUES (10, 301), (20, 302), (30, 303);
 GO
 
--- 4. Sample Updates and Advanced Queries
+
 UPDATE Payroll SET salary = salary * 1.10 WHERE Employee_id = 10;
 UPDATE Performance SET score = 95 WHERE Employee_id = 10;
 
--- Complex Join Query for Portfolio
+
 SELECT E.Employee_name, T.Name_trainer, P.comments
 FROM Employee E
 INNER JOIN Employee_Training ET ON E.Employee_id = ET.Employee_id
