@@ -15,3 +15,9 @@ Training & Development: Managing professional skills and trainer assignments.
 
 Database Schema & Architecture
 The system consists of 14 interconnected tables optimized for data integrity and performance.
+## Project Diagrams
+### 1. Conceptual ERD Model
+![ERD Diagram](IMG-20251221-WA0003.jpg)
+
+### 2. Physical Database Schema
+![Schema Diagram](IMG-20251221-WA0002.jpg)
